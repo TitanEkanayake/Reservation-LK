@@ -1,0 +1,86 @@
+/* Login.css (or any appropriate CSS file name) */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1498758536662-35b82cd15e29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80");
+  background-size: contain;
+  background-color: #061c2b;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-box {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* White background color with some transparency */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  height: 300px;
+  text-align: center;
+}
+
+.ul-h2 {
+  color: #3498db; /* Blue color for heading */
+}
+
+.ul-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ul-label {
+  margin-top: 10px;
+  color: #3498db; /* Blue color for labels */
+}
+
+.ul-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #3498db; /* Blue border color for input fields */
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.ul-login-btn {
+  background-color: #3498db; /* Blue background color for the button */
+  color: #fff; /* White color for text on the button */
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.ul-login-btn:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+.signup-link {
+  margin-top: 15px;
+  color: #fff; /* White color for the signup link text */
+}
+
+.signup-link a {
+  color: #3498db; /* Blue color for the link */
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline; /* Underline the link on hover */
+}
