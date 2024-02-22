@@ -1,48 +1,46 @@
-/* Login.css (or any appropriate CSS file name) */
-.ul-container {
+.csu-container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: calc(100vh - 80px);
   background-color: #061c2b;
 }
-
-.ul-box {
+.csu-box {
   display: flex;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
-
-.ul-background-image {
+.csu-background-image {
   width: 400px;
-  height: 412px;
-  background-image: url("https://images.unsplash.com/photo-1498758536662-35b82cd15e29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80");
+  height: 510px;
+  background-image: url("https://images.unsplash.com/photo-1570126618953-d437176e8c79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=794&q=80");
   background-size: cover;
 }
 
-.ul-login-content {
+.csu-signup-content {
   width: 50%;
   padding: 20px;
   text-align: center;
 }
-.ul-h2 {
+
+.csu-h2 {
   color: #3498db; /* Blue color for heading */
 }
 
-.ul-form {
+.csu-form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.ul-label {
+.csu-label {
   margin-top: 10px;
   color: #3498db; /* Blue color for labels */
 }
 
-.ul-input {
+.csu-input {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -51,7 +49,7 @@
   box-sizing: border-box;
 }
 
-.ul-login-btn {
+.csu-signup-btn {
   background-color: #3498db; /* Blue background color for the button */
   color: #fff; /* White color for text on the button */
   padding: 10px;
@@ -63,20 +61,40 @@
   transition: background-color 0.3s;
 }
 
-.ul-login-btn:hover {
+.csu-signup-btn:hover {
   background-color: #2980b9; /* Darker blue on hover */
 }
 
-.signup-link {
+.csu-login-link {
   margin-top: 15px;
-  color: #fff; /* White color for the signup link text */
+  color: #000000; /* White color for the login link text */
 }
 
-.signup-link a {
+.csu-login-link a {
   color: #3498db; /* Blue color for the link */
   text-decoration: none;
 }
 
-.signup-link a:hover {
+.csu-login-link a:hover {
   text-decoration: underline; /* Underline the link on hover */
+}
+
+.csu-next-btn {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.csu-next-btn:hover {
+  background-color: #2980b9;
+}
+
+.csu-step2 {
+  display: none; /* Initially hide Step 2 */
 }

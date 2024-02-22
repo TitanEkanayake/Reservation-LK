@@ -4,12 +4,15 @@ import "./Navbar.css";
 
 const Navbar1 = () => {
   const { pathname } = useLocation();
-  const UserNav = ["/CustomerLogin", "/Companylogin", "/CustomerSignup"];
+  const UserNav = ["/CustomerLogin", "/CustomerSignup"];
+  const CompNav = ["/Companylogin", "/CompanySignup"];
 
   // Function to check if the current path is the user login page
   const isHomePage = () => pathname === "/";
   const isUserLoginPage = () =>
     UserNav.findIndex((e) => e.toLowerCase() === pathname.toLowerCase()) !== -1;
+  const isCompanyLoginPage = () =>
+    CompNav.findIndex((e) => e.toLowerCase() === pathname.toLowerCase()) !== -1;
   return (
     <nav className="h-navbar">
       <div className="h-logo">Reservation LK</div>
@@ -28,11 +31,15 @@ const Navbar1 = () => {
             </li>
           </>
         )}
-
         {/* Conditionally render "as company" button on the user login page */}
         {isUserLoginPage() && (
           <li>
-            <Link to="/about">Continue As a Company ?</Link>
+            <Link to="/Companylogin">Continue As a Company ?</Link>
+          </li>
+        )}
+        {isCompanyLoginPage() && (
+          <li>
+            <Link to="/Customerlogin">Continue As a Customer ?</Link>
           </li>
         )}
       </ul>

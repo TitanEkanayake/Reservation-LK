@@ -1,5 +1,5 @@
 /* Login.css (or any appropriate CSS file name) */
-.ul-container {
+.cl-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +7,7 @@
   background-color: #061c2b;
 }
 
-.ul-box {
+.cl-login-box {
   display: flex;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
@@ -15,34 +15,35 @@
   overflow: hidden;
 }
 
-.ul-background-image {
+.cl-background-image {
   width: 400px;
   height: 412px;
-  background-image: url("https://images.unsplash.com/photo-1498758536662-35b82cd15e29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80");
+  background-image: url("https://images.unsplash.com/photo-1554232456-8727aae0cfa4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
   background-size: cover;
 }
 
-.ul-login-content {
+.cl-login-content {
   width: 50%;
   padding: 20px;
   text-align: center;
 }
-.ul-h2 {
+
+.cl-h2 {
   color: #3498db; /* Blue color for heading */
 }
 
-.ul-form {
+.cl-form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.ul-label {
+.cl-label {
   margin-top: 10px;
   color: #3498db; /* Blue color for labels */
 }
 
-.ul-input {
+.cl-input {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -51,7 +52,7 @@
   box-sizing: border-box;
 }
 
-.ul-login-btn {
+.cl-login-btn {
   background-color: #3498db; /* Blue background color for the button */
   color: #fff; /* White color for text on the button */
   padding: 10px;
@@ -63,20 +64,20 @@
   transition: background-color 0.3s;
 }
 
-.ul-login-btn:hover {
+.cl-login-btn:hover {
   background-color: #2980b9; /* Darker blue on hover */
 }
 
-.signup-link {
+.c-signup-link {
   margin-top: 15px;
   color: #fff; /* White color for the signup link text */
 }
 
-.signup-link a {
+.c-signup-link a {
   color: #3498db; /* Blue color for the link */
   text-decoration: none;
 }
 
-.signup-link a:hover {
+.c-signup-link a:hover {
   text-decoration: underline; /* Underline the link on hover */
 }

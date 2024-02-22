@@ -1,33 +1,28 @@
-/* Login.css (or any appropriate CSS file name) */
-body {
-  margin: 0;
-  font-family: "Arial", sans-serif;
-}
-
-.signup-container {
+.usu-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-image: url("https://images.unsplash.com/photo-1556742111-a301076d9d18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-  background-size: contain;
+  height: calc(100vh - 80px);
   background-color: #061c2b;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-.signup-box {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* White background color with some transparency */
+.usu-box {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
-  padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.usu-background-image {
   width: 400px;
-  height: 450px;
+  height: 510px;
+  background-image: url("https://images.unsplash.com/photo-1556742111-a301076d9d18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+}
+
+.usu-signup-content {
+  width: 50%;
+  padding: 20px;
   text-align: center;
 }
 
@@ -67,20 +62,40 @@ body {
   transition: background-color 0.3s;
 }
 
-.ul-signup-btn:hover {
+.usu-signup-btn:hover {
   background-color: #2980b9; /* Darker blue on hover */
 }
 
-.signup-link {
+.usu-login-link {
   margin-top: 15px;
-  color: #000000; /* White color for the signup link text */
+  color: #000000; /* White color for the login link text */
 }
 
-.signup-link a {
+.usu-login-link a {
   color: #3498db; /* Blue color for the link */
   text-decoration: none;
 }
 
-.signup-link a:hover {
+.usu-login-link a:hover {
   text-decoration: underline; /* Underline the link on hover */
+}
+
+.usu-next-btn {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.usu-next-btn:hover {
+  background-color: #2980b9;
+}
+
+.usu-step2 {
+  display: none; /* Initially hide Step 2 */
 }
