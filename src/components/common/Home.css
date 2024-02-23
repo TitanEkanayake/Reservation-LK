@@ -15,15 +15,15 @@
   align-items: center;
 }
 
-.h-hero-container > h1 {
+.h-main-heading {
   color: #fff;
   font-size: 100px;
   margin-top: -100px;
 }
 
-.h-hero-container > p {
+.h-main-paragraph {
   margin-top: 8px;
-  color: #fff;
+    color: #fff;
   font-size: 32px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -34,14 +34,14 @@
 }
 
 @media screen and (max-width: 960px) {
-  .h-hero-container > h1 {
+  .h-main-heading {
     font-size: 70px;
     margin-top: -150px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .h-hero-container > h1 {
+  .h-main-heading {
     font-size: 50px;
     margin-top: -100px;
   }
@@ -64,4 +64,10 @@
 
 .h-start-btn:hover {
   background-color: #2980b9; /* Darker blue on hover */
+}
+
+.h-abountus-paragraph{
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  font-size: 18px;
 }

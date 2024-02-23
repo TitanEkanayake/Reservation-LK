@@ -6,6 +6,7 @@ import { Signup as UserSignup } from "./components/user/Signup";
 import { Signup as CompanySignup } from "./components/company/Signup";
 import Home from "./components/common/Home";
 import Navbar1 from "./components/common/Navbar";
+import Footer from "./components/common/Footer";
 
 function App() {
   const { pathname } = useLocation();
@@ -31,6 +32,7 @@ function App() {
         <Route path="/Companylogin" element={<CompanyLogin />} />
         <Route path="/Companysignup" element={<CompanySignup />} />
       </Routes>
+      {enableNav() && <Footer />}
     </div>
   );
 }

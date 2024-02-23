@@ -8,7 +8,7 @@ const Navbar1 = () => {
   const CompNav = ["/Companylogin", "/CompanySignup"];
 
   // Function to check if the current path is the user login page
-  const isHomePage = () => pathname === "/";
+  // const isHomePage = () => pathname === "/";
   const isUserLoginPage = () =>
     UserNav.findIndex((e) => e.toLowerCase() === pathname.toLowerCase()) !== -1;
   const isCompanyLoginPage = () =>
@@ -17,11 +17,8 @@ const Navbar1 = () => {
     <nav className="h-navbar">
       <div className="h-logo">Reservation LK</div>
       <ul className="h-nav-links">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
         {/* Conditionally render "About Us" and "Contact Us" button on the user login page */}
-        {isHomePage() && (
+        {/* {isHomePage() && (
           <>
             <li>
               <Link to="/about">About Us</Link>
@@ -30,12 +27,16 @@ const Navbar1 = () => {
               <Link to="/contact">Contact Us</Link>
             </li>
           </>
-        )}
+        )} */}
         {/* Conditionally render "as company" button on the user login page */}
         {isUserLoginPage() && (
+          <>
+           <li>
+          <Link to="/">Home</Link>
+        </li>
           <li>
             <Link to="/Companylogin">Continue As a Company ?</Link>
-          </li>
+          </li></>
         )}
         {isCompanyLoginPage() && (
           <li>

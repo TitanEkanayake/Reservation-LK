@@ -1,8 +1,20 @@
-import React from "react";
+
+import React, { useState } from 'react';
 import "./ULogin.css";
 import { Link } from "react-router-dom";
+import ForgetPasswordPopup from './ForgetPasswordPopup';
 
 export const Login = () => {
+  const [isForgetPasswordPopupOpen, setForgetPasswordPopupOpen] = useState(false);
+  console.log(setForgetPasswordPopupOpen)
+  const handleForgetPasswordClick = (e) => {
+    e.preventDefault();
+    setForgetPasswordPopupOpen(true);
+  };
+
+  const handleCloseForgetPasswordPopup = (e) => {
+    setForgetPasswordPopupOpen(false);
+  };
   return (
     <div className="ul-container">
       <div className="ul-box">
@@ -11,14 +23,14 @@ export const Login = () => {
           <h2 className="ul-h2">USER LOGIN</h2>
           <form className="ul-form">
             <label className="ul-label" htmlFor="username">
-              Username:
+              Email:
             </label>
             <input
               className="ul-input"
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Enter your username"
+              type="email"
+              id="Email"
+              name="email"
+              placeholder="Enter your email"
             />
 
             <label className="ul-label" htmlFor="password">
@@ -31,7 +43,14 @@ export const Login = () => {
               name="password"
               placeholder="Enter your password"
             />
+             <div>
+      
+              <button className="ul-forgetpassword-btn" onClick={handleForgetPasswordClick}>Forgot Password?</button>
 
+              {isForgetPasswordPopupOpen && (
+                <ForgetPasswordPopup onClose={handleCloseForgetPasswordPopup} />
+              )}
+            </div>
             <button className="ul-login-btn" type="submit">
               Login
             </button>

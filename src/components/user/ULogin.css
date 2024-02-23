@@ -66,7 +66,20 @@
 .ul-login-btn:hover {
   background-color: #2980b9; /* Darker blue on hover */
 }
-
+.ul-forgetpassword-btn {
+  background-color: #c71515; /* Blue background color for the button */
+  color: #fff; /* White color for text on the button */
+  padding: 5px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+.ul-forgetpassword-btn:hover {
+  background-color: #ff0000; /* Darker blue on hover */
+}
 .signup-link {
   margin-top: 15px;
   color: #fff; /* White color for the signup link text */
