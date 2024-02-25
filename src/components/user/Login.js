@@ -1,18 +1,19 @@
-
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./ULogin.css";
 import { Link } from "react-router-dom";
-import ForgetPasswordPopup from './ForgetPasswordPopup';
+import ForgetPasswordPopup from "./ForgetPasswordPopup";
 
 export const Login = () => {
-  const [isForgetPasswordPopupOpen, setForgetPasswordPopupOpen] = useState(false);
-  console.log(setForgetPasswordPopupOpen)
+  const [isForgetPasswordPopupOpen, setForgetPasswordPopupOpen] =
+    useState(false);
+
   const handleForgetPasswordClick = (e) => {
     e.preventDefault();
     setForgetPasswordPopupOpen(true);
   };
 
   const handleCloseForgetPasswordPopup = (e) => {
+    e.preventDefault();
     setForgetPasswordPopupOpen(false);
   };
   return (
@@ -43,10 +44,13 @@ export const Login = () => {
               name="password"
               placeholder="Enter your password"
             />
-             <div>
-      
-              <button className="ul-forgetpassword-btn" onClick={handleForgetPasswordClick}>Forgot Password?</button>
-
+            <div>
+              <button
+                className="ul-forgetpassword-btn"
+                onClick={handleForgetPasswordClick}
+              >
+                Forgot Password?
+              </button>
               {isForgetPasswordPopupOpen && (
                 <ForgetPasswordPopup onClose={handleCloseForgetPasswordPopup} />
               )}

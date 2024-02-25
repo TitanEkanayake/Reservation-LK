@@ -24,19 +24,19 @@ const ForgetPasswordPopup = ({ onClose }) => {
         </div>
         <div className="popup-content">
           <p>Please enter your email address to reset your password.</p>
-          <form className='pop-form' onSubmit={handleSubmit}>
-            <label className='pop-label'>Email:</label>
-            <input
-            className='pop-input'
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={handleEmailChange}
-              required
-            />
-            <button className='pop-submit' type="submit">Reset Password</button>
-          </form>
         </div>
+        <form className='pop-form' onSubmit={handleSubmit}>
+          <label className='pop-label'>Email:</label>
+          <input
+            className='pop-input'
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={handleEmailChange}
+            required
+          />
+          <button className='pop-submit' type="submit">Reset Password</button>
+        </form>
       </div>
     </div>
   );

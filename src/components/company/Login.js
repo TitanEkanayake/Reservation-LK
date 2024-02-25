@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+
 import "./CLogin.css";
 import { Link } from "react-router-dom";
+import ForgetPasswordPopup from "../user/ForgetPasswordPopup";
 
 export const Login = () => {
+  const [isForgetPasswordPopupOpen, setForgetPasswordPopupOpen] =
+    useState(false);
+
+  const handleForgetPasswordClick = (e) => {
+    e.preventDefault();
+    setForgetPasswordPopupOpen(true);
+  };
+
+  const handleCloseForgetPasswordPopup = (e) => {
+    e.preventDefault();
+    setForgetPasswordPopupOpen(false);
+  };
   return (
     <div className="cl-container">
       <div className="cl-login-box">
@@ -31,7 +45,17 @@ export const Login = () => {
               name="password"
               placeholder="Enter your password"
             />
-
+            <div>
+              <button
+                className="ul-forgetpassword-btn"
+                onClick={handleForgetPasswordClick}
+              >
+                Forgot Password?
+              </button>
+              {isForgetPasswordPopupOpen && (
+                <ForgetPasswordPopup onClose={handleCloseForgetPasswordPopup} />
+              )}
+            </div>
             <button className="cl-login-btn" type="submit">
               Login
             </button>
